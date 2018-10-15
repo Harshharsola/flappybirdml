@@ -113,11 +113,15 @@ function Perceptron(){
 function points(){
 this.x;
 this.y;
+this.width=600;
+this.height=800;
 this.label;
   this.set_val=function()
   {
-    this.x=random(600);
-    this.y=random(600);
+    this.x=random(-1, 1);
+    this.y=random(-1, 1);
+    this.x=map(-1, 1, 0, width);
+    this.y=map(-1, 1, height, 0);
     if (this.x*2+10>this.y){
       this.label=1;
     }
